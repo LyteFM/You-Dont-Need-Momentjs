@@ -12,6 +12,7 @@ Problems with Moment.js:
 - It is mutable and it causes bugs:
   - [clone](https://momentjs.com/docs/#/parsing/moment-clone/)
   - [How do I work around mutability in moment.js?](https://stackoverflow.com/questions/30979178/how-do-i-work-around-mutability-in-moment-js)
+  - [Several](https://github.com/moment/moment/issues/5403) [problems](https://github.com/moment/moment/issues/5347) [with](https://github.com/moment/moment/issues/5034) time arithmetic around DST changes. In Luxon and date-fns, modifying or jumping to the start and end of a day works as expected.
 - Complex OOP API (which doubles mutability problem). Here is an example:
   https://github.com/moment/moment/blob/develop/src/test/moment/add_subtract.js#L244-L286
   Moment.js allows to use `a.subtract('ms', 50)`, `a.subtract(50, 'ms')` and even `a.subtract('s', '50')`.
